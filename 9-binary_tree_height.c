@@ -12,20 +12,18 @@ size_t binary_tree_height(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	else
-	{
-		/* height of each subtree */
-		height_left = binary_tree_height(tree->left);
-		height_rigth = binary_tree_height(tree->right);
 
-		/* only add if it is not a leaf */
-		if (tree->left || tree->right)
-		{
-			/* calculate routes */
-			if (height_left > height_rigth)
-				return (height_left + 1);
-			return (height_rigth + 1);
-		}
-		return (0);
+	/* height of each subtree */
+	height_left = binary_tree_height(tree->left);
+	height_rigth = binary_tree_height(tree->right);
+
+	/* only add if it is not a leaf */
+	if (tree->left || tree->right)
+	{
+		/* calculate routes */
+		if (height_left > height_rigth)
+			return (height_left + 1);
+		return (height_rigth + 1);
 	}
+	return (0);
 }
