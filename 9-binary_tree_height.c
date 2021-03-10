@@ -24,8 +24,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 			/* calculate routes */
 			if (height_left > height_rigth)
 				return (height_left + 1);
-			else
-				return (height_rigth + 1);
+			return (height_rigth + 1);
 		}
 		return (0);
 	}
