@@ -2,7 +2,7 @@
 
 /**
  * binary_tree_is_root - Checks if a node is a root
- * @tree: node
+ * @node: node
  * Return: 1 if node is a leaf, otherwise 0
  */
 int binary_tree_is_root(const binary_tree_t *node)
